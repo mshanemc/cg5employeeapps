@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="ducatiInspections">
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:attribute name="dealers" type="object[]" />
+	<aura:attribute name="columns" type="object[]" />
+	<aura:attribute name="inspectionFields" type="Object" />
+	<aura:handler event="ltng:sendMessage" action="{!c.assemble}"/>
+
+	<force:recordData aura:id="frd" mode="EDIT" targetFields="{!v.inspectionFields}" layoutType="FULL" />
+
+	<aura:if isTrue="{!!v.inspectionFields}">
+		<lightning:datatable keyField="Id" data="{!v.dealers}" columns="{!v.columns}" onrowselection="{!c.selectedRecord}" />
+	</aura:if>
+
+	<aura:if isTrue="{!v.inspectionFields}">
+		<lightning:button label="Submit Inspection" onclick="{!c.submit}" variant="brand" />
+	</aura:if>
+
+</aura:component>

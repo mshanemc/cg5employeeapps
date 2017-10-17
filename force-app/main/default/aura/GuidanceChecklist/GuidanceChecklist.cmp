@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+			<aura:attribute name="targetFields" type="Object" />
+			<force:recordData aura:id="frd" mode="EDIT" targetFields="{!v.targetFields}" fields="Guidelines_Lead__c,Guidelines_Data_Quality__c, Guidelines_Brand_Display__c" />
+
+			<aura:handler event="ltng:selectSObject" action="{!c.setInsp}"/>
+			<aura:handler name="change" value="v.targetFields" action="{!c.updateMessage}"/>
+
+			<lightning:card title="Guidelines Shared" iconName="custom:custom109" variant="base">
+					<aura:set attribute="actions">
+						<!--actions go here, mostly buttons!-->
+					</aura:set>
+					<aura:set attribute="footer">
+						<!--footer markup-->
+					</aura:set>
+					<div class="slds-p-horizontal_medium">
+							<lightning:input value="{!v.targetFields.Guidelines_Lead__c}" type="checkbox" label="Lead Follow-up" checked="{!v.targetFields.Guidelines_Lead__c}"/>
+							<lightning:input value="{!v.targetFields.Guidelines_Data_Quality__c}" type="checkbox" label="Data Quality" checked="{!v.targetFields.Guidelines_Lead__c}"/>
+							<lightning:input value="{!v.targetFields.Guidelines_Brand_Display__c}" type="checkbox" label="Brand Display" checked="{!v.targetFields.Guidelines_Lead__c}"/>
+					</div>
+
+				</lightning:card>
+
+		</aura:component>

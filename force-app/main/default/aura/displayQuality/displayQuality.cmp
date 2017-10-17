@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+	<aura:attribute name="targetFields" type="Object" />
+	<force:recordData aura:id="frd" mode="EDIT" targetFields="{!v.targetFields}" fields="Display_Quality__c"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:handler event="ltng:selectSObject" action="{!c.setInsp}"/>
+	<aura:handler name="change" value="v.targetFields" action="{!c.updateMessage}"/>
+
+	<lightning:card title="Display Quality" iconName="custom:custom109" variant="base">
+			<aura:set attribute="actions">
+				<!--actions go here, mostly buttons!-->
+			</aura:set>
+			<aura:set attribute="footer">
+				<!--footer markup-->
+			</aura:set>
+			<div class="slds-p-horizontal_medium">
+				<lightning:slider value="{!v.targetFields.Display_Quality__c}" min="0" max="10" step="1" variant="label-hidden" />
+			</div>
+
+		</lightning:card>
+
+</aura:component>

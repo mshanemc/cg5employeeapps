@@ -1,0 +1,26 @@
+<aura:component>
+
+	<aura:attribute name="value" type="object" access="public" required="true"/>
+	<aura:attribute name="choices" type="string" access="public" required="true"/>
+	<aura:attribute name="buttonGroup" type="boolean" access="public" required="false" default="true"/>
+	<aura:attribute name="stretch" type="boolean" access="public" required="false" default="true"/>
+
+	<aura:attribute name="choicesArray" type="string[]"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+	<aura:if isTrue="{!v.buttonGroup}">
+		<lightning:buttonGroup class="button_choices">
+				<aura:iteration items="{!v.choicesArray}" var="choice">
+					<lightning:button onclick="{!c.setValue}" label="{!choice}" title="{!choice}" variant="{!if(choice==v.value, 'brand', 'neutral')}" class="{!if(v.stretch, 'stretch', '')}"/>
+				</aura:iteration>
+		</lightning:buttonGroup>
+	</aura:if>
+
+	<aura:if isTrue="{!!v.buttonGroup}">
+		<aura:iteration items="{!v.choicesArray}" var="choice">
+			<lightning:button onclick="{!c.setValue}" label="{!choice}" title="{!choice}" variant="{!if(choice==v.value, 'brand', 'neutral')}" class="{!if(v.stretch, 'stretch', '')}"/>
+		</aura:iteration>
+	</aura:if>
+
+</aura:component>

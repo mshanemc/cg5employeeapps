@@ -1,0 +1,39 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+	<aura:handler event="ltng:selectSObject" action="{!c.setInsp}"/>
+
+	<aura:attribute name="targetFields" type="Object" />
+
+	<force:recordData aura:id="frd" mode="EDIT" targetFields="{!v.targetFields}" fields="Name, Square_Feet_per_Bike__c,Model_Selection__c,Merchandise_Mix__c"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:handler name="change" value="v.targetFields" action="{!c.updateMessage}"/>
+
+	<!--icons at https://www.lightningdesignsystem.com/icons/ -->
+	<lightning:card title="Retail Quality" iconName="custom:custom109" variant="base">
+		<aura:set attribute="actions">
+			<!--actions go here, mostly buttons!-->
+		</aura:set>
+		<aura:set attribute="footer">
+			<!--footer markup-->
+		</aura:set>
+		<div class="slds-p-horizontal_medium">
+
+			<div class="slds-text-heading_small slds-m-vertical_medium">{!v.targetFields.Name}</div>
+			<div class="slds-m-vertical_large">
+				<div class="slds-text-heading_small slds-m-vertical_medium">Sq. ft. per bike</div>
+				<c:buttonChoices value="{!v.targetFields.Square_Feet_per_Bike__c}" choices="Low,Medium,High"/>
+			</div>
+
+			<div class="slds-m-vertical_large">
+				<div class="slds-text-heading_small slds-m-vertical_medium">Model selection</div>
+				<c:buttonChoices value="{!v.targetFields.Model_Selection__c}" choices="Low,Medium,High"/>
+			</div>
+
+			<div class="slds-m-vertical_large">
+				<div class="slds-text-heading_small slds-m-vertical_medium">Merchandise Mix</div>
+				<c:buttonChoices value="{!v.targetFields.Merchandise_Mix__c}" choices="Poor,Fair,Good"/>
+			</div>
+		</div>
+	</lightning:card>
+</aura:component>

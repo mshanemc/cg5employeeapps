@@ -1,0 +1,9 @@
+.THIS.button_choices {
+	width:100%;
+	display:flex;
+	flex-direction: row;
+}
+
+.THIS .stretch{
+	flex:auto;
+}

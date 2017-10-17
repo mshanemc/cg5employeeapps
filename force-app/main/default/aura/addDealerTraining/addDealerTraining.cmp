@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+	<aura:attribute name="trails" type="object[]" />
+	<!--icons at https://www.lightningdesignsystem.com/icons/ -->
+	<lightning:card title="Training" iconName="custom:custom109" variant="base">
+		<aura:set attribute="actions">
+			<!--actions go here, mostly buttons!-->
+		</aura:set>
+		<aura:set attribute="footer">
+			<!--footer markup-->
+		</aura:set>
+		<div class="slds-p-horizontal_medium">
+			<lightning:layoutItem>
+				<aura:iteration items="{!v.trails}" var="trail">
+					<lightning:layoutItem>
+						<p>{!trail.Name}</p>
+						<img src="{!trail.image}" id="{!trail.Id}" onclick="{!selectTrail}" />
+					</lightning:layoutItem>
+				</aura:iteration>
+			</lightning:layoutItem>
+			<!--then put your body here, outside any aura:set-->
+		</div>
+	</lightning:card>
+</aura:component>
