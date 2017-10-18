@@ -4,12 +4,9 @@
         <headerColor>#0070D2</headerColor>
     </brand>
     <formFactors>Large</formFactors>
-    <label>Dealer Manager</label>
+    <label>Concierge</label>
     <navType>Standard</navType>
     <tab>standard-Feed</tab>
-    <tab>standard-Account</tab>
-    <tab>Field_Inspection__c</tab>
-    <tab>Mobile_Inspections</tab>
     <uiType>Lightning</uiType>
-    <utilityBar>Dealer_Manager_UtilityBar</utilityBar>
+    <utilityBar>Concierge_UtilityBar</utilityBar>
 </CustomApplication>

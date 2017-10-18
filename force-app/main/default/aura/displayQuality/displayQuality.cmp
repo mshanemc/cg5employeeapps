@@ -7,7 +7,7 @@
 	<aura:handler event="ltng:selectSObject" action="{!c.setInsp}"/>
 	<aura:handler name="change" value="v.targetFields" action="{!c.updateMessage}"/>
 
-	<lightning:card title="Display Quality" iconName="custom:custom109" variant="base">
+	<lightning:card title="Display Quality" iconName="utility:photo" variant="base">
 			<aura:set attribute="actions">
 				<!--actions go here, mostly buttons!-->
 			</aura:set>

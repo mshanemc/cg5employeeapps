@@ -55,10 +55,9 @@
     <externalSharingModel>ReadWrite</externalSharingModel>
     <label>Recommended Training</label>
     <nameField>
-        <displayFormat>RT-{0}</displayFormat>
         <label>Recommended Training Name</label>
         <trackHistory>false</trackHistory>
-        <type>AutoNumber</type>
+        <type>Text</type>
     </nameField>
     <pluralLabel>Recommended Training</pluralLabel>
     <searchLayouts/>

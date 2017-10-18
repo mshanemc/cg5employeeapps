@@ -1,8 +1,9 @@
 ({
     doInit : function(component) {
-        var columns=[{
-            label: 'Dealer', fieldName: 'Name'
-        }];
+        var columns=[
+            { label: 'Dealer', fieldName: 'Name' },
+            { label: 'City', fieldName: 'ShippingCity'}
+        ];
 
         component.set("v.columns", columns);
 
@@ -66,7 +67,7 @@
         console.log(component.get("v.inspectionFields"));
     },
 
-    submit : function(component, event, helper) {
+    submit : function(component) {
         component.find("frd").saveRecord(
             $A.getCallback(function(saveResult){
                 //console.log(saveResult);
@@ -77,7 +78,7 @@
                 } else if (saveResult.state === "INCOMPLETE") {
                     console.log('User is offline, device doesn\'t support drafts.');
                 } else if (saveResult.state === "ERROR"){
-                    component.find("leh").passErrors(saveResult.error);
+                    console.log(saveResult.error);
                 }
             })
         );

@@ -6,7 +6,7 @@
 			<aura:handler event="ltng:selectSObject" action="{!c.setInsp}"/>
 			<aura:handler name="change" value="v.targetFields" action="{!c.updateMessage}"/>
 
-			<lightning:card title="Guidelines Shared" iconName="custom:custom109" variant="base">
+			<lightning:card title="Guidelines Shared" iconName="utility:chat" variant="base">
 					<aura:set attribute="actions">
 						<!--actions go here, mostly buttons!-->
 					</aura:set>
@@ -15,8 +15,8 @@
 					</aura:set>
 					<div class="slds-p-horizontal_medium">
 							<lightning:input value="{!v.targetFields.Guidelines_Lead__c}" type="checkbox" label="Lead Follow-up" checked="{!v.targetFields.Guidelines_Lead__c}"/>
-							<lightning:input value="{!v.targetFields.Guidelines_Data_Quality__c}" type="checkbox" label="Data Quality" checked="{!v.targetFields.Guidelines_Lead__c}"/>
-							<lightning:input value="{!v.targetFields.Guidelines_Brand_Display__c}" type="checkbox" label="Brand Display" checked="{!v.targetFields.Guidelines_Lead__c}"/>
+							<lightning:input value="{!v.targetFields.Guidelines_Data_Quality__c}" type="checkbox" label="Data Quality" checked="{!v.targetFields.Guidelines_Data_Quality__c}"/>
+							<lightning:input value="{!v.targetFields.Guidelines_Brand_Display__c}" type="checkbox" label="Brand Display" checked="{!v.targetFields.Guidelines_Brand_Display__c}"/>
 					</div>
 
 				</lightning:card>

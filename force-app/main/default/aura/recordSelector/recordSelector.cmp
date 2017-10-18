@@ -9,7 +9,23 @@
 	<force:recordData aura:id="frd" mode="EDIT" targetFields="{!v.inspectionFields}" layoutType="FULL" />
 
 	<aura:if isTrue="{!!v.inspectionFields}">
-		<lightning:datatable keyField="Id" data="{!v.dealers}" columns="{!v.columns}" onrowselection="{!c.selectedRecord}" />
+		<!--icons at https://www.lightningdesignsystem.com/icons/ -->
+		<lightning:card title="Select Dealer" iconName="utility:company" variant="base">
+			<aura:set attribute="actions">
+				<!--actions go here, mostly buttons!-->
+			</aura:set>
+			<aura:set attribute="footer">
+				<!--footer markup-->
+			</aura:set>
+			<div class="slds-p-horizontal_medium">
+				<!--then put your body here, outside any aura:set-->
+				<lightning:datatable keyField="Id" data="{!v.dealers}" columns="{!v.columns}" onrowselection="{!c.selectedRecord}" />
+
+			</div>
+		</lightning:card>
+
+
+
 	</aura:if>
 
 	<aura:if isTrue="{!v.inspectionFields}">

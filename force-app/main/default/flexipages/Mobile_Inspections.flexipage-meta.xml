@@ -13,6 +13,9 @@
         <componentInstances>
             <componentName>GuidanceChecklist</componentName>
         </componentInstances>
+        <componentInstances>
+            <componentName>addDealerTraining</componentName>
+        </componentInstances>
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>

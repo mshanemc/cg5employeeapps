@@ -1,0 +1,17 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef1"
+            },
+            "Name": "Power Motors",
+            "Type": "Dealer",
+            "ShippingCity": "Houston",
+            "ShippingCountry": "USA",
+            "ShippingPostalCode": "77002",
+            "ShippingState": "TX",
+            "ShippingStreet": "1111 Louisiana"
+        }
+    ]
+}

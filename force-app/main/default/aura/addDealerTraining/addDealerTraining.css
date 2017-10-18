@@ -1,2 +1,7 @@
-.THIS {
+.THIS .trail_icon {
+	width:100%
+}
+
+.THIS .trail_icon.transparent {
+	opacity: 0.25;
 }

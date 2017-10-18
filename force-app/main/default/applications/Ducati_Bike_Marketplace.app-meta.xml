@@ -2,14 +2,13 @@
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <brand>
         <headerColor>#0070D2</headerColor>
+        <logo>ducatimultistrada1200enduro</logo>
+        <logoVersion>1</logoVersion>
     </brand>
     <formFactors>Large</formFactors>
-    <label>Dealer Manager</label>
+    <label>Ducati Bike Marketplace</label>
     <navType>Standard</navType>
     <tab>standard-Feed</tab>
-    <tab>standard-Account</tab>
-    <tab>Field_Inspection__c</tab>
-    <tab>Mobile_Inspections</tab>
     <uiType>Lightning</uiType>
-    <utilityBar>Dealer_Manager_UtilityBar</utilityBar>
+    <utilityBar>Ducati_Bike_Marketplace_UtilityBar</utilityBar>
 </CustomApplication>

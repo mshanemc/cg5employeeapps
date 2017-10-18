@@ -1,8 +1,16 @@
 <aura:component implements="flexipage:availableForAllPageTypes">
 
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:handler event="ltng:selectSObject" action="{!c.setInsp}"/>
+
 	<aura:attribute name="trails" type="object[]" />
+
+	<force:recordData aura:id="frd" mode="EDIT" targetFields="{!v.targetFields}" layoutType="FULL" />
+	<aura:attribute name="targetFields" type="Object"/>
+
+
 	<!--icons at https://www.lightningdesignsystem.com/icons/ -->
-	<lightning:card title="Training" iconName="custom:custom109" variant="base">
+	<lightning:card title="Training" iconName="utility:trail" variant="base">
 		<aura:set attribute="actions">
 			<!--actions go here, mostly buttons!-->
 		</aura:set>
@@ -10,14 +18,14 @@
 			<!--footer markup-->
 		</aura:set>
 		<div class="slds-p-horizontal_medium">
-			<lightning:layoutItem>
+			<lightning:layout horizontalAlign="space" pullToBoundary="medium">
 				<aura:iteration items="{!v.trails}" var="trail">
-					<lightning:layoutItem>
-						<p>{!trail.Name}</p>
-						<img src="{!trail.image}" id="{!trail.Id}" onclick="{!selectTrail}" />
+					<lightning:layoutItem padding="around-medium">
+						<img src="{!trail.image}" id="{!trail.id}" onclick="{!c.selectTrail}" class="{!'trail_icon' + if(trail.highlighted, '', ' transparent')}"/>
+						<p class="slds-text-heading_medium slds-text-align_center">{!trail.name}</p>
 					</lightning:layoutItem>
 				</aura:iteration>
-			</lightning:layoutItem>
+			</lightning:layout>
 			<!--then put your body here, outside any aura:set-->
 		</div>
 	</lightning:card>
