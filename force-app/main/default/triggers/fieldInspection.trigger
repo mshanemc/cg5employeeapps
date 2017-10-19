@@ -22,7 +22,7 @@ trigger fieldInspection on Field_Inspection__c (after update) {
         list<Recommended_Training__c> RTs = [select id, name from Recommended_Training__c where Field_Inspection__c =: fi.Id];
 
         //get the community by name
-        list<Network> Communities = [select Id from Network where Name='Dealer Managers'];
+        list<Network> Communities = [select Id from Network where Name='Dealer Manager Community'];
 
         ConnectApi.FeedItemInput input = new ConnectApi.FeedItemInput();
         input.subjectId = fi.Id; //post should be on the inspection itself

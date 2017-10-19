@@ -1,0 +1,18 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+<!--icons at https://www.lightningdesignsystem.com/icons/ -->
+<lightning:card title="Competitive Update" iconName="utility:preview" variant="base">
+	<aura:set attribute="actions">
+		<!--actions go here, mostly buttons!-->
+	</aura:set>
+	<aura:set attribute="footer">
+		<!--footer markup-->
+	</aura:set>
+	<div class="slds-p-horizontal_medium">
+		<!--then put your body here, outside any aura:set-->
+		<p class="slds-text-heading_small slds-p-bottom_large"><b>Harley-Davidson</b> is hosting a new line-up demo event in <b>San Jose</b> on ... <a href="">Learn More</a></p>
+		<p class="slds-text-heading_small">New tear-down video of the 2018 <b>BMW</b> all-electric C-Evolution <a href="">Watch (youTube)</a></p>
+	</div>
+</lightning:card>
+
+</aura:component>

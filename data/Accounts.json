@@ -11,7 +11,18 @@
             "ShippingCountry": "USA",
             "ShippingPostalCode": "77002",
             "ShippingState": "TX",
-            "ShippingStreet": "1111 Louisiana"
+            "ShippingStreet": "1111 Louisiana",
+
+            "BillingCity": "Houston",
+            "BillingCountry": "USA",
+            "BillingPostalCode": "77002",
+            "BillingState": "TX",
+            "BillingStreet": "1111 Louisiana",
+
+            "Average_Lead_Followup_Days__c" : 3,
+            "Lead_Conversion_Rate__c" : 0.042,
+            "Retail_Identity__c" : 0.75,
+            "Training_Completion__c" : 0.56
         }
     ]
 }

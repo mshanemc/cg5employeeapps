@@ -1,0 +1,22 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+		<!--icons at https://www.lightningdesignsystem.com/icons/ -->
+		<lightning:card title="Popular Discussions this Week" iconName="utility:announcement" variant="base">
+			<aura:set attribute="actions">
+				<!--actions go here, mostly buttons!-->
+			</aura:set>
+			<aura:set attribute="footer">
+				<!--footer markup-->
+			</aura:set>
+			<div class="slds-p-horizontal_medium">
+				<!--then put your body here, outside any aura:set-->
+				<p class="slds-text-heading_small slds-p-bottom_large">
+					<b> NEW! </b> <a href="">Focus Group for Bike Launch</a>
+				</p>
+				<p class="slds-text-heading_small">
+					<a href="">North American Dealer Gathering 2018</a>
+				</p>
+			</div>
+		</lightning:card>
+
+		</aura:component>
